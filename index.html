@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Willekeurige Bloemenafbeelding</title>
+</head>
+<body>
+  <h1>Een willekeurige bloemenafbeelding</h1>
+  <img id="flowerImage" src="" alt="Bloemen" style="max-width: 100%; height: auto;">
+  <br>
+  <a id="downloadLink" href="#" download="bloemen.jpg">Download afbeelding</a>
+
+  <script>
+    function updateImage() {
+      const imageUrl = "https://source.unsplash.com/800x600/?flowers&" + new Date().getTime();
+      document.getElementById("flowerImage").src = imageUrl;
+      document.getElementById("downloadLink").href = imageUrl;
+    }
+    updateImage();
+    setInterval(updateImage, 60000);
+  </script>
+</body>
+</html>
