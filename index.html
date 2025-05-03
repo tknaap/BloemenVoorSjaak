@@ -9,21 +9,21 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #f3f3f3, #d6eaf8);
+      background: linear-gradient(135deg, #f3f3f3, #fffff);
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 95vh;
+      min-height: 85vh;
       text-align: center;
       margin: 20px;
     }
 
     #questionContainer,
     #imageContainer {
-      background-color: white;
-      padding: 25px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      // background-color: #d6eaf8;
+      //padding: 25px;
+      // border-radius: 15px;
+      // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       max-width: 500px;
       width: 100%;
     }
@@ -55,7 +55,7 @@
 
     img {
       max-width: 100%;
-      height: auto;
+      height: 80%;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       margin-bottom: 20px;
@@ -92,7 +92,7 @@
   </div>
 
   <div id="imageContainer">
-    <h1>Bloemetje voor Sjaak!</h1>
+    <h1>Bloemetjes voor Sjaak!</h1>
     <img id="flowerImage" src="" alt="">
     <div id="fallbackText" style="display: none;">De bloemetjes zijn even op, op het volgende hele uur is de voorraad weer aangevuld!</div>
     <h3>Groetjes Tom</h3>
@@ -108,7 +108,7 @@
       const fallbackText = document.getElementById("fallbackText");
 
       try {
-        const response = await fetch(`https://api.unsplash.com/photos/random?query=bouquet%20flowers&orientation=portrait&client_id=${ACCESS_KEY}`);
+        const response = await fetch(`https://api.unsplash.com/photos/random?query=Happy%20only%20fresh%20flowers%20bouquet&orientation=portrait&client_id=${ACCESS_KEY}`);
         
         if (!response.ok) {
           throw new Error();
@@ -143,7 +143,7 @@
         setInterval(fetchRandomFlowerImage, 60000);
         launchConfetti();
       } else {
-        document.getElementById("questionContainer").innerHTML = "<h2 style='color: #e74c3c;'>Dat zijn dus geen bloemen voor jou! 😉</h2>";
+        document.getElementById("questionContainer").innerHTML = "<h2 style='color: #e74c3c;'>De bloemen zijn voor Sjaak, niet voor jou! 😉</h2>";
       }
     }
 
