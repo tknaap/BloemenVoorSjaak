@@ -108,7 +108,7 @@
       const fallbackText = document.getElementById("fallbackText");
 
       try {
-        const response = await fetch(`https://api.unsplash.com/photos/random?query=Happy%20only%20fresh%20flowers%20bouquet&orientation=portrait&client_id=${ACCESS_KEY}`);
+        const response = await fetch(`https://api.unsplash.com/photos/random?query=fresh%20flowers%20bouquet&orientation=portrait&client_id=${ACCESS_KEY}`);
         
         if (!response.ok) {
           throw new Error();
