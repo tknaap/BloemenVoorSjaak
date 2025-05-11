@@ -13,7 +13,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 85vh;
+      max-height: 85vh;
       text-align: center;
       margin: 20px;
     }
@@ -141,7 +141,6 @@
         document.getElementById("questionContainer").style.display = "none";
         document.getElementById("imageContainer").style.display = "flex";
         fetchRandomFlowerImage();
-        setInterval(fetchRandomFlowerImage, 60000);
         launchConfetti();
       } else {
         document.getElementById("questionContainer").innerHTML = "<h2 style='color: #e74c3c;'>De bloemen zijn voor Sjaak, niet voor jou! 😉</h2>";
